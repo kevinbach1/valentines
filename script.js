@@ -10,6 +10,11 @@ const buttons = document.getElementById("letter-buttons");
 const finalText = document.getElementById("final-text");
 const johnLegendImg = document.getElementById("john-legend-img");
 
+if (johnLegendImg) {
+  johnLegendImg.style.display = "none";
+}
+
+
 // Click Envelope
 
 envelope.addEventListener("click", () => {
@@ -61,19 +66,16 @@ noBtn.addEventListener("mouseover", () => {
 // YES is clicked
 
 yesBtn.addEventListener("click", () => {
-    title.textContent = "Yippeeee! Surprise!";
-
+    title.textContent = "Yippeeee!";
     catImg.src = "cat_dance.gif";
 
     document.querySelector(".letter-window").classList.add("final");
-
     buttons.style.display = "none";
 
     finalText.style.display = "block";
-    johnLegendImg.style.display = "block";
-    requestAnimationFrame(() => {
-        johnLegendImg.style.opacity = "1";
-        johnLegendImg.style.transform = "scale(1)";
-    });
+
+    if (johnLegendImg) {
+        johnLegendImg.style.display = "block";
+    }
 });
 
