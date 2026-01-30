@@ -10,11 +10,6 @@ const buttons = document.getElementById("letter-buttons");
 const finalText = document.getElementById("final-text");
 const johnLegendImg = document.getElementById("john-legend-img");
 
-if (johnLegendImg) {
-  johnLegendImg.style.display = "none";
-}
-
-
 // Click Envelope
 
 envelope.addEventListener("click", () => {
@@ -67,15 +62,14 @@ noBtn.addEventListener("mouseover", () => {
 
 yesBtn.addEventListener("click", () => {
     title.textContent = "Yippeeee!";
+
     catImg.src = "cat_dance.gif";
 
     document.querySelector(".letter-window").classList.add("final");
+
     buttons.style.display = "none";
 
     finalText.style.display = "block";
-
-    if (johnLegendImg) {
-        johnLegendImg.style.display = "block";
-    }
+    johnLegendImg.style.display = "block";
 });
 
